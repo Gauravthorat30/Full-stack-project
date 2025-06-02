@@ -11,7 +11,7 @@ console.log("hii")
 dotenv.config();
 
 
-export const registerUser = async (req, res) => {
+const registerUser = async (req, res) => {
 
 
     const {name, email, password} = req.body;
@@ -107,7 +107,7 @@ export const registerUser = async (req, res) => {
 
 }
 
-export const verifyUser = async (req , res) => {
+const verifyUser = async (req , res) => {
 
     
     console.log("10")
@@ -152,7 +152,7 @@ export const verifyUser = async (req , res) => {
 
 }
 
-export const login = async (req , res) => {
+const login = async (req , res) => {
 
     try {
         const {email , password} = req.body;
@@ -225,7 +225,40 @@ export const login = async (req , res) => {
     }
 
 
+} 
+
+
+const getMe = async (req , res) => {
+    try{
+
+    }
+    catch(error){
+
+    }
 }
+
+const logoutUser = async (req , res) => {
+
+}
+
+const resetPassword = async (req , res) => {
+
+}
+
+const forgotPassword = async (req , res) => {
+
+}
+
+export {registerUser , 
+    verifyUser , 
+    login , 
+    getMe , 
+    logoutUser , 
+    resetPassword , 
+    forgotPassword 
+}
+
+
 
 
 
