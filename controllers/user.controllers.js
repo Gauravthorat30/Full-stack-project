@@ -14,8 +14,6 @@ dotenv.config();
 export const registerUser = async (req, res) => {
 
 
-
-
     const {name, email, password} = req.body;
     try {
 
@@ -125,9 +123,8 @@ export const verifyUser = async (req , res) => {
         const tokenMatched = await User.findOne({
             verificationToken : tokenSendByUser
         })
-    
+        console.log(tokenMatched)
         if(tokenMatched){
-
             tokenMatched.isVerified = true
             await tokenMatched.save();
 
